@@ -31,7 +31,7 @@ const MovieCard = ({
     return (
         <div className="movie-card">
             <a href={homepage} target="_blank">
-                <img src={poster_path ? `https://image.tmdb.org/t/p/w500/${poster_path}` : "/no-movie.png"} alt={title} />
+                <img src={poster_path ? `https://image.tmdb.org/t/p/w500/${poster_path}` : "./no-movie.png"} alt={title} />
             </a>
 
             <div className="mt-4">

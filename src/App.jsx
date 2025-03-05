@@ -5,6 +5,7 @@ import MovieCard from "./components/MovieCard";
 import { useState, useEffect } from "react";
 import { useDebounce } from "react-use";
 import { updateSearchCount, getTrendingMovies } from "./appwrite";
+import TrendingMovie from "./components/TrendingMovie";
 
 const API_BASE_URL = "https://api.themoviedb.org/3";
 
@@ -112,10 +113,7 @@ const App = () => {
           ) : (
             <ul>
               {trendingMovies.map((movie, index) => (
-                <li key={movie.$id}>
-                  <p>{index + 1}</p>
-                  <img src={movie.poster_url} alt={movie.title} />
-                </li>
+                <TrendingMovie key={movie.$id} index={index} movie={movie} />
               ))}
             </ul>
           )}
