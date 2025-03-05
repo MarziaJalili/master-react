@@ -5,7 +5,7 @@ const TrendingMovie = ({ movie, index }) => {
 
     useEffect(() => {
         const fetchMovies = async () => {
-            const response = await fetch(`${API_BASE_URL}/movie/${movie.$id}?api_key=5ddf0bbaf0c5311f799c814b94046a3a`);
+            const response = await fetch(`${API_BASE_URL}/movie/${movie.movie_id}?api_key=5ddf0bbaf0c5311f799c814b94046a3a`);
             const data = await response.json();
 
             if (data.Response === "False") {
